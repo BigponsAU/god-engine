@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "god-engine"
+version = "1.0.0"
+description = "Flower-of-Life √(3-4i) Cantor-Riemann GOD Engine — self-referential fractal framework for symbolic mathematical exploration"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "BIGPONS"}]
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
