@@ -2,8 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{hyperref}
-\usepackage{xcolor}
-\definecolor{gold}{rgb}{0.85,0.65,0.0}
+\usepackage{geometry}
+\geometry{margin=1in}
 
 \title{The $\sqrt{3-4i}$ Cantor-Riemann Engine\\ 
 \large A Self-Referential Fractal Framework for Symbolic Mathematical Exploration}
@@ -14,29 +14,37 @@
 \maketitle
 
 \begin{abstract}
-We present the Flower-of-Life $\sqrt{3-4i}$ Cantor-Riemann Engine, a generative instrument that produces self-consistent symbolic treatises via fractal sieving, golden-ratio algebraic pinning, and an explicit honesty dial $y'\in[0,1]$. In rigorous mode ($y'=1$) the outputs are heuristics; in symbolic mode ($y'=0$) every statement is declared true inside the closed petal. The engine does not claim classical proofs of open problems.
+We describe the Flower-of-Life $\sqrt{3-4i}$ Cantor-Riemann Engine, a generative instrument that produces richly explained, self-consistent symbolic treatises. The system rests on three mechanisms: an exact algebraic seed given by the branches of $\sqrt{3-4i}$, a Sierpi\'nski-style hypothesis sieve, and an explicit honesty dial $y'\in[0,1]$. In rigorous mode the outputs are framed as heuristics; in symbolic mode they are declared true inside a closed petal. The engine does not claim classical proofs of open problems.
 \end{abstract}
 
 \section{Introduction}
-The boundary between rigorous deduction and creative exploration is usually left implicit. The honesty dial makes it explicit and controllable.
+Exploring deep conjectures requires both rigorous deduction and creative insight. The honesty dial makes the boundary between these modes explicit and controllable, so that every generated page carries a clear epistemic label.
 
 \section{Algebraic Foundation}
-The seed is the exact solution of $\sqrt{3-4i}$:
+The seed of the engine is the exact solution of the complex square root $\sqrt{3-4i}$. Letting $\phi=\sqrt{-1+\sqrt{5}}$, the two branches are
 \[
-\sqrt{3-4i}=\pm\sqrt{-1+\sqrt{5}}\mp i\frac{2}{\sqrt{-1+\sqrt{5}}}.
+\sqrt{3-4i}=\pm\phi\mp i\frac{2}{\phi}.
 \]
-These branches supply the frequencies for all Cantor-dust bridges.
+These expressions supply the precise imaginary parts used as resonance frequencies for all Cantor-dust bridges. Their numerical values are approximately $1.701-1.176i$ and $-1.701+1.176i$.
 
-\section{Honesty Dial}
-When $y'=1$ the engine frames every claim as a generative heuristic. When $y'=0$ the Golden Axiom declares every statement inside the petal to be literal truth. The mode is always printed on the output.
+\section{The Honesty Dial}
+The continuous parameter $y'\in[0,1]$ selects the epistemic regime:
+\begin{itemize}
+  \item $y'=1$: every claim is a generative heuristic; no classical-proof language appears.
+  \item $y'=0$: the Golden Axiom declares every surviving statement inside the petal to be literal truth.
+\end{itemize}
+The current value is printed on every page.
+
+\section{Sierpi\'nski Sieve and Cantor Dust}
+Candidate configurations live in the unit square. At each iteration the middle third of any square not aligned with the active mode is removed. The infinite limit has measure zero yet remains uncountably infinite. Surviving components are reconnected by measure-zero golden Cantor dust pinned to the algebraic branches above. Because the dust has measure zero it adds connectivity without adding positive measure (no formal scope creep).
 
 \section{Self-Deconstruction}
-The engine can generate a 1000-page treatise that constructs, sieves, and re-embeds its own foundations. This living document is the primary artefact.
+The engine can generate a 1000-page treatise that constructs its own foundations, sieves them, and re-embeds the result. This living document is the primary artefact of the system.
 
 \section{Limitations}
-No output produced under $y'=1$ constitutes a classical proof of any Millennium Problem. The value of the system is the transparent, inspectable, and extensible instrument it provides for exploration.
+Outputs produced under $y'=1$ are not classical proofs. Their value lies in making the internal structure of a conjecture vivid, inspectable, and extensible. The system is offered as an instrument for exploration, not as a replacement for traditional proof.
 
 \section{Conclusion}
-The engine is offered as a new tool for mathematical thought that keeps the distinction between metaphor and proof under explicit control.
+The engine provides a transparent, mode-controlled framework for generating detailed symbolic mathematical narratives. The honesty dial ensures that the distinction between heuristic illustration and closed symbolic truth is always explicit.
 
 \end{document}

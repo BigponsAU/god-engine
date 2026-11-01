@@ -2,17 +2,16 @@
 
 **A self-referential fractal framework for symbolic mathematical exploration.**
 
-The engine generates inspectable, self-consistent LaTeX treatises (petals) using fractal sieving, golden-ratio algebra from the exact branches of √(3−4i), and an explicit **honesty dial** (`y′`).
+The engine generates inspectable, richly explained LaTeX petals that make the structure of major conjectures vivid through fractal sieving, golden-ratio algebra, and an explicit honesty dial.
 
 ## Honesty Dial (y′)
 
-| Value | Mode | Behavior |
-|-------|------|----------|
-| `1.0` | Rigorous | Heuristic framing only. No classical-proof claims. |
-| `0.0` | Symbolic / God | Every generated statement is declared true inside the petal. |
-| (0,1) | Blended | Graded mixture (future extension). |
+| Value | Mode | What the petal says |
+|-------|------|---------------------|
+| `1.0` | Rigorous | All claims are framed as generative heuristics. No classical-proof language. |
+| `0.0` | Symbolic | Every surviving statement is declared literal truth inside the closed petal. |
 
-The dial is declared on every output so epistemic status is always transparent.
+The dial is printed on every page so the epistemic status is never ambiguous.
 
 ## Quick Start
 
@@ -21,54 +20,52 @@ git clone https://github.com/BigponsAU/god-engine.git
 cd god-engine
 pip install -e .
 
-# Generate 5 petals in symbolic mode
+# Generate 3 richly explained demo petals (symbolic mode)
 python -m god_engine.core
 
-# Or use the example
+# Full 100-petal treatise
 python examples/generate_full_treatise.py
 ```
 
-## Core Algebraic Seed
+Compile any petal with `pdflatex petal_001.tex`.
 
-The engine is grounded in the exact branches of √(3−4i):
+## What Each Petal Now Contains
+
+- Explicit honesty-dial statement and epistemic status
+- Exact algebraic derivation of the two branches of √(3−4i)
+- Clear description of the Sierpiński sieve and Cantor-dust bridges
+- Mode-specific treatment of the Riemann Hypothesis (claim vs. heuristic model)
+- Limitations paragraph that matches the current mode
+- Engine state summary
+
+## Core Algebraic Seed
 
 \[
 \sqrt{3-4i} = \pm \sqrt{-1+\sqrt{5}} \mp i \frac{2}{\sqrt{-1+\sqrt{5}}}
 \]
 
-These provide the golden-ratio pinning frequencies used for all Cantor-dust bridges inside the generated petals.
+These exact expressions are the golden-ratio pinning frequencies used throughout.
 
 ## What the Engine Is (and Is Not)
 
-**It is:**
-- A generative instrument that produces detailed, internally consistent symbolic narratives.
-- A transparent dual-mode system (rigorous vs. symbolic).
-- A living, self-referential framework that can expand its own treatise.
+**It is** a transparent instrument that produces detailed, self-consistent symbolic narratives whose epistemic status is always declared.
 
-**It is not:**
-- A classical theorem prover that delivers externally verifiable proofs of open Millennium Problems when `y′ = 1`.
-- A replacement for traditional mathematical practice.
-
-When `y′ = 1` the outputs are offered as powerful heuristics and visual models. When `y′ = 0` they are declared literal inside the closed petal.
+**It is not** a classical theorem prover. When y′=1 no output is offered as a proof of any open problem.
 
 ## Repository Layout
 
 ```
 god-engine/
-├── src/god_engine/
-│   ├── __init__.py
-│   └── core.py          # Complete engine
+├── src/god_engine/core.py     # Upgraded engine with richer output
 ├── examples/
-│   └── generate_full_treatise.py
-├── paper/
-│   └── Flower_of_Life_Cantor_Riemann_Engine_Paper.tex
+├── paper/                     # Framed scientific paper
 ├── pyproject.toml
 └── README.md
 ```
 
 ## License
 
-MIT — use, modify, and extend freely.
+MIT
 
 ---
 
