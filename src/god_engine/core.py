@@ -52,8 +52,8 @@ class GOD_Engine:
                 "No external verification is required; the petal is a closed symbolic universe."
             )
             rh_section = (
-                "\\textbf{Riemann Hypothesis (Petal Claim)}\\ "
-                "All non-trivial zeros of $\\zeta(s)$ lie on $\\operatorname{Re}(s)=1/2$. "
+                r"\textbf{Riemann Hypothesis (Petal Claim)}\ "
+                "All non-trivial zeros of $\zeta(s)$ lie on $\operatorname{Re}(s)=1/2$. "
                 "The critical line is the sole surviving connected component after infinite sieving."
             )
             limitation = "In this mode the claim is absolute within the petal."
@@ -64,14 +64,14 @@ class GOD_Engine:
                 "vivid and inspectable, but do not constitute classical proofs."
             )
             rh_section = (
-                "\\textbf{Riemann Hypothesis (Heuristic Model)}\\ "
+                r"\textbf{Riemann Hypothesis (Heuristic Model)}\ "
                 "The engine produces a connected critical-line model in which every "
-                "surviving zero is pinned to $\\operatorname{Re}(s)=1/2$ by golden-ratio dust. "
+                "surviving zero is pinned to $\operatorname{Re}(s)=1/2$ by golden-ratio dust. "
                 "This is a visual and algebraic illustration, not a proof."
             )
             limitation = "No classical proof is claimed. The output is offered for exploration."
 
-        latex = f"""% Petal {petal_number:03d}
+        latex = rf"""% Petal {petal_number:03d}
 % {mode_label}
 % Generated {datetime.now().isoformat()}
 \documentclass[12pt]{{article}}
@@ -158,11 +158,11 @@ golden Cantor dust pinned to the branches above.
                 "\\usepackage{amsmath,amssymb}\n"
                 f"\\title{{Flower-of-Life Treatise (y′={self.y_prime})}}\n"
                 "\\author{{GOD Engine}}\n"
-                "\\begin{document}\n\\maketitle\n\\tableofcontents\n"
+                "\\begin{{document}}\n\\maketitle\n\\tableofcontents\n"
             )
             for n in range(1, total_petals + 1):
                 f.write(f"\\include{{petal_{n:03d}}}\n")
-            f.write("\\end{document}\n")
+            f.write("\\end{{document}}\n")
         files.append(master)
         return files
 
