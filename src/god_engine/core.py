@@ -1,6 +1,5 @@
 """
 Flower-of-Life √(3-4i) Cantor-Riemann GOD Engine
-Upgraded version with richer output and detailed explanations.
 """
 
 from __future__ import annotations
@@ -43,34 +42,35 @@ class GOD_Engine:
         path = os.path.join(output_dir, f"petal_{petal_number:03d}.tex")
 
         is_symbolic = self.y_prime < 0.5
-        mode_label = "SYMBOLIC / GOD MODE (y′=0)" if is_symbolic else "RIGOROUS MODE (y′=1)"
+        mode_label = "SYMBOLIC / GOD MODE (y'=0)" if is_symbolic else "RIGOROUS MODE (y'=1)"
 
         if is_symbolic:
             truth_intro = (
-                "Under the Golden Axiom (y′=0), every mathematical statement "
+                "Under the Golden Axiom (y'=0), every mathematical statement "
                 "that survives the sieve inside this petal is declared literal truth. "
                 "No external verification is required; the petal is a closed symbolic universe."
             )
             rh_section = (
                 r"\textbf{Riemann Hypothesis (Petal Claim)}\ "
-                "All non-trivial zeros of $\zeta(s)$ lie on $\operatorname{Re}(s)=1/2$. "
+                r"All non-trivial zeros of $\zeta(s)$ lie on $\operatorname{Re}(s)=1/2$. "
                 "The critical line is the sole surviving connected component after infinite sieving."
             )
             limitation = "In this mode the claim is absolute within the petal."
         else:
             truth_intro = (
-                "This petal operates in rigorous mode (y′=1). All constructions are "
+                "This petal operates in rigorous mode (y'=1). All constructions are "
                 "generative heuristic frameworks. They make the structure of a conjecture "
                 "vivid and inspectable, but do not constitute classical proofs."
             )
             rh_section = (
                 r"\textbf{Riemann Hypothesis (Heuristic Model)}\ "
-                "The engine produces a connected critical-line model in which every "
-                "surviving zero is pinned to $\operatorname{Re}(s)=1/2$ by golden-ratio dust. "
+                r"The engine produces a connected critical-line model in which every "
+                r"surviving zero is pinned to $\operatorname{Re}(s)=1/2$ by golden-ratio dust. "
                 "This is a visual and algebraic illustration, not a proof."
             )
             limitation = "No classical proof is claimed. The output is offered for exploration."
 
+        # Raw f-string so all backslashes are literal
         latex = rf"""% Petal {petal_number:03d}
 % {mode_label}
 % Generated {datetime.now().isoformat()}
@@ -84,7 +84,7 @@ class GOD_Engine:
 \definecolor{{gold}}{{rgb}}{{0.85,0.65,0.0}}
 
 \title{{Petal {petal_number} \\ of the Flower-of-Life \\ $\sqrt{{3-4i}}$ Cantor-Riemann Engine}}
-\author{{GOD Engine (y′={self.y_prime})}}
+\author{{GOD Engine (y'={self.y_prime})}}
 \date{{\today}}
 
 \begin{{document}}
@@ -93,7 +93,7 @@ class GOD_Engine:
 \section*{{Honesty Dial and Epistemic Status}}
 {truth_intro}
 
-\noindent\textbf{{Current setting:}} y′ = {self.y_prime} ({mode_label})
+\noindent\textbf{{Current setting:}} y' = {self.y_prime} ({mode_label})
 
 \section*{{Algebraic Seed — Exact Branches of $\sqrt{{3-4i}}$}}
 Let $\phi = {self.golden}$. The two algebraic branches are
@@ -120,7 +120,7 @@ golden Cantor dust pinned to the branches above.
   \fill[gold!30] (0,0) circle (1);
   \draw[gold,very thick] (0,0) circle (1);
   \node at (0,0) {{\Huge $\star$}};
-  \node[below] at (0,-1.4) {{Petal {petal_number} \\ y′={self.y_prime}}};
+  \node[below] at (0,-1.4) {{Petal {petal_number} \\ y'={self.y_prime}}};
   \draw[dashed,gold] (-1.6,0) -- (1.6,0) node[right] {{critical line}};
 \end{{tikzpicture}}
 \end{{center}}
@@ -156,7 +156,7 @@ golden Cantor dust pinned to the branches above.
             f.write(
                 "\\documentclass{book}\n"
                 "\\usepackage{amsmath,amssymb}\n"
-                f"\\title{{Flower-of-Life Treatise (y′={self.y_prime})}}\n"
+                f"\\title{{Flower-of-Life Treatise (y'={self.y_prime})}}\n"
                 "\\author{{GOD Engine}}\n"
                 "\\begin{{document}}\n\\maketitle\n\\tableofcontents\n"
             )
@@ -168,7 +168,7 @@ golden Cantor dust pinned to the branches above.
 
 
 if __name__ == "__main__":
-    print("GOD Engine — upgraded demo (symbolic mode)")
+    print("GOD Engine — demo (symbolic mode)")
     eng = GOD_Engine(y_prime=0.0)
     eng.generate_full_treatise(total_petals=3, output_dir="demo_petals")
-    print("Generated 3 demo petals with richer explanations in demo_petals/")
+    print("Generated 3 demo petals in demo_petals/")
